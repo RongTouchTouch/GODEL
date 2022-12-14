@@ -31,9 +31,9 @@ class PerChatPretrain(datasets.GeneratorBasedBuilder):
         )
 
     def _split_generators(self, dl_manager):
-        train_path = './perchat/perchat_train.jsonl'
-        validation_path = './perchat/perchat_valid.jsonl'
-        test_path = './perchat/perchat_test.jsonl'
+        train_path = './perchat/perchat_single_train.jsonl'
+        validation_path = './perchat/perchat_single_valid.jsonl'
+        test_path = './perchat/perchat_single_valid.jsonl'
 
         return [
             datasets.SplitGenerator(name=datasets.Split.TRAIN, gen_kwargs={
